@@ -1,22 +1,26 @@
+import random
+
 destinations = ["Costa Rica", "Alaska", "Paris", "Brasil", "Oregon"]
 restaurants = ["A local cafe", "In n out", "Chipotle", "Canes", "Sambazon"]
 transportation = ["Skateboard", "Bus", "Boat", "Train", "Limousine"]
 entertainment = ["Jack Johnson Concert", "Circus", "Fishing", "Line Dancing", "Sky Diving"]
 
+random_dest = random.choice(destinations)
+random_rest = random.choice(restaurants)
+random_trans = random.choice(transportation)
+random_entertain = random.choice(entertainment)
 
 def trip_generator():
+    print ("Destination:" + random_dest)
 
-    import random
-    print ("Destination:" + random.choice(destinations))
+    
+    print ("Restaurant:" + random_rest)
 
-    import random
-    print ("Restaurant:" + random.choice(restaurants))
+    
+    print ("Transportation:" + random_trans)
 
-    import random
-    print ("Transportation:" + random.choice(transportation))
-
-    import random
-    print ("Entertainment:" + random.choice(entertainment))
+    
+    print ("Entertainment:" + random_entertain)
 
     print (" ")
 
@@ -36,5 +40,5 @@ while user_input == "No":
     trip_generator()
     user_input = input("Are you satisfied with your trip? Yes or No   ")
     if user_input == "Yes":
-     print("Your trip selection is complete!")
+     print(f'Your trip selection is complete! Enjoy your trip to {random_dest}')
      print()
