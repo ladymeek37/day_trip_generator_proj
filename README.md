@@ -1,2 +1,1 @@
 # day_trip_generator_proj
-testing
