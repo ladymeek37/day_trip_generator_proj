@@ -1,4 +1,5 @@
 import random
+from tkinter.messagebox import YES
 
 destinations = ["Costa Rica", "Alaska", "Paris", "Brasil", "Oregon"]
 restaurants = ["A local cafe", "In n out", "Chipotle", "Canes", "Sambazon"]
@@ -34,11 +35,16 @@ trip_generator()
 
 user_input = input("Are you satisfied with your trip? Yes or No   ")
 while user_input == "No":
-    print("")
-    print("New Trip:")
-    print("")
-    trip_generator()
-    user_input = input("Are you satisfied with your trip? Yes or No   ")
-    if user_input == "Yes":
-     print(f'Your trip selection is complete! Enjoy your trip to {random_dest}')
-     print()
+        print("")
+        print("New Trip:")
+        print("")
+        random_dest = random.choice(destinations)
+        random_rest = random.choice(restaurants)
+        random_trans = random.choice(transportation)
+        random_entertain = random.choice(entertainment)
+        trip_generator()
+        user_input = input("Are you satisfied with your trip? Yes or No   ")
+        if user_input == "Yes":
+            print ("")
+            print (f"Enjoy your trip to {random_dest}, eating at {random_rest}, traveling by {random_trans}, and enjoying {random_entertain}!")
+            print ("")
